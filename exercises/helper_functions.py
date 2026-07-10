@@ -36,7 +36,7 @@ class Helper:
             "temperature":temperature
         }
         if system:
-            params["system"] = self.system
+            params["system"] = system
 
         message = self.client.messages.create(**params)
         return message.content[0].text
